@@ -12,7 +12,7 @@ minetest.register_node(
             "bookpress_front.png" -- z-
         },
         is_ground_content = true,
-        groups = {cracky = 1},
+        groups = {choppy = 2},
         on_rightclick = function(pos, node, player, itemstack, pointed_thing)
             if (itemstack:get_name() == "default:book_written") then -- Don't want to copy anything other than books
                 local inv = player:get_inventory()
@@ -41,7 +41,7 @@ minetest.register_node(
     }
 )
 
--- Recipe for the cigarette
+-- Recipe for the bookpress
 minetest.register_craft({
     type = "shaped", 
     output = "bookpress:copy",
