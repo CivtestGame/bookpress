@@ -52,7 +52,7 @@ minetest.register_craft({
     output = "bookpress:copy",
     recipe = {
         {"group:wood", "group:wood", "group:wood",},
-        {"group:wood", "default:copper_ingot", "group:wood",},
-        {"group:wood", "default:copper_ingot", "group:wood",},
+        {"group:wood", "group:ferrous_ingot", "group:wood",},
+        {"group:wood", "group:metal_ingot", "group:wood",},
     }
 })
