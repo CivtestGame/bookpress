@@ -1,5 +1,5 @@
 # Printing Press
-Version 1.00
+Version 1.01
 
 Adds a printing press node which copies books at the cost of three paper
 
@@ -18,6 +18,7 @@ W,C,W
 ## Changelog:
 
 1.0: initial version with printing press
+1.01: copies have different names from original
 
 Contact me at discord *@The32bitguy#7553* for help, suggestions and bug reports
 
