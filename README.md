@@ -6,13 +6,12 @@ Adds a printing press node which copies books at the cost of three paper
 Crafting:
 ```
 W = wood
-C = copper ingot
-I = iron ingot
+M = metal ingot
 
 press:
 W,W,W
-W,I,W
-W,C,W
+W,M,W
+W,M,W
 ```
 
 ## Changelog:
