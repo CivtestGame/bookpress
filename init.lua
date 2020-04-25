@@ -18,8 +18,11 @@ minetest.register_node(
                 local inv = player:get_inventory()
 
                 if (inv:contains_item("main", "default:paper 3")) then --You need paper -- Give book copy, take paper and send message
-                    inv:add_item("main", itemstack:peek_item(1))
+                    local book = itemstack:peek_item(1)
+                    local bmeta = book:get_meta()
+                    bmeta:set_string("description","A copy of " .. bmeta:get_string("description"))
                     inv:remove_item("main", "default:paper 3")
+                    inv:add_item("main", book)  
                     minetest.chat_send_player(player:get_player_name(), "The book is copied ")
                      --Plays a sound at the nodes position
                      printpos = pos
@@ -47,7 +50,7 @@ minetest.register_craft({
     output = "bookpress:copy",
     recipe = {
         {"group:wood", "group:wood", "group:wood",},
-        {"group:wood", "group:ferrous_ingot", "group:wood",},
+        {"group:wood", "group:metal_ingot", "group:wood",},
         {"group:wood", "group:metal_ingot", "group:wood",},
     }
 })
