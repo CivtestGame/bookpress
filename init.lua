@@ -20,7 +20,7 @@ minetest.register_node(
                 if (inv:contains_item("main", "default:paper 3")) then --You need paper -- Give book copy, take paper and send message
                     local book = itemstack:peek_item(1)
                     local bmeta = book:get_meta()
-                    bmeta:set_string("description","A copy of " .. bmeta:get_string("description"))
+                    bmeta:set_string("description","Copy of " .. bmeta:get_string("description"))
                     inv:remove_item("main", "default:paper 3")
                     inv:add_item("main", book)  
                     minetest.chat_send_player(player:get_player_name(), "The book is copied ")
